@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --font-primary: Verdana;
+}
+
+.btn {
+    border: none;
+    padding: 5px 20px;
+    background-color: gray;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*
+ ======================== Navbar
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(90, 90, 90);
+}
+
+.navbar .navbar__icon {
+    margin-left: 20px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    color: orange;
+    position: relative;
+}
+
+.navbar .navbar__icon::before {
+    content: '';
+    height: 50px;
+    width: 4px;
+    background-color: orange;
+    display: inherit;
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+    transform: rotate(54deg);
+    border-radius: 5px;
+}
+
+.navbar .navbar__icon .navbar__seconditem {
+    position: relative;
+    top: 16px;
+}
+
+.navbar__items {
+    align-items: center;
+    display: flex;
+}
+
+.navbar__ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    margin: 0 20px;
+    font-family: var(--font-primary);
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar__btn {
+    background-color: orange;
+}
+
+/*
+======================== Hero
+*/
+
+.hero {
+    border: 1px solid green;
+    height: 75vh;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    height: 400px;
+    width: 400px;
+    background-color: orange;
+    display: inherit;
+    position: absolute;
+    top: 50px;
+    right: -200px;
+    transform: rotate(54deg);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.hero::after {
+    content: '';
+    height: 350px;
+    width: 350px;
+    background-color: rgb(48, 96, 187);
+    display: inherit;
+    position: absolute;
+    top: 180px;
+    right: -200px;
+    transform: rotate(54deg);
+    border-radius: 50%;
+    z-index: 20;
+}
+
+/*
+======================== Container Table
+*/
+
