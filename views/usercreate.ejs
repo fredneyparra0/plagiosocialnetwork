@@ -1,0 +1,35 @@
+<%- include('./templates/header', {title : 'plagio user created'})  %>
+    <%- include('./templates/navbar')  %> 
+
+    <div class="container">
+        <div class="container__align">
+            <img class="container__imagesmall" src="./image/ok.png" alt="">
+        </div>
+        <p class="container__principaltitle">congratulations your account is create</p>
+        <p class="container__secundarytitle">You can now enter your account by clicking</p>
+        <div class="container__align margin">
+            <span class="container__btn btn noneshadow orange">Sign Up</span>
+        </div>
+    </div>
+
+    <div class="boxdisplacement <% if (show) { %>
+        <%- 'show' %>        
+    <% } %>">
+        <div class="boxdisplacement__container">
+            <span class="boxdisplacement__btn">X</span>
+            <form class="hero__form margin50" action="/home-user" method="POST">
+                <input class="hero__input" name="email" type="text" placeholder="Insert your mail">
+                <input class="hero__input" name="password" type="text" placeholder="Insert your password">
+                <input class="btn hero__btninput" type="submit" value="Sign Up">
+                <p class="hero__message-danger"> <%= message %>  </p>
+            </form>
+            <div class="hero__containerlinks">
+                <span class="hero__link left">Reset password</span>
+                <span class="hero__link right">¿Forgot your password?</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

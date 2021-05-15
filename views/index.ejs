@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>index page</title>
-</head>
-<body>
-    <div class="navbar">
-        <div class="navbar__icon">
-            <span class="navbar__firstitem">Rappi</span>
-            <span class="navbar__seconditem">Plagio</span>
-        </div>
-        <div class="navbar__items">
-            <ul class="navbar__ul">
-                <li class="navbar__item">
-                    <span class="navbar__link" href="/login">Login</span>
-                </li>
-                <li class="navbar__item">
-                    <span class="navbar__btn btn" href="/login">Sign Up</span>
-                </li>
-            </ul>
-        </div>
-    </div>
+<%- include('./templates/header', {title : 'plagio instagram'})  %> 
+
+    <%- include('./templates/navbar')  %> 
+    
 
     <div class="hero">
-        
+        <div class="hero__box">
+            <p class="hero__title">Create your free account now</p>
+            <form class="hero__form" action="/usercreated" method="POST">
+                <input class="hero__input" name="name" type="text" placeholder="Insert your name">
+                <input class="hero__input" name="email" type="text" placeholder="Insert your mail">
+                <input class="hero__input" name="password" type="text" placeholder="Insert your new password">
+                <input class="btns hero__btninput" type="submit" value="Create Now">
+                <p class="hero__message-danger"> <%= error %>  </p>
+            </form>
+            <div class="hero__containerlinks">
+                <span class="hero__link left">Reset password</span>
+                <span class="hero__link right">¿Forgot your password?</span>
+            </div>
+        </div>
+    </div>
+    <div class="boxdisplacement <% if (show) { %>
+        <%- 'show' %>        
+    <% } %>">
+        <div class="boxdisplacement__container">
+            <span class="boxdisplacement__btn">X</span>
+            <form class="hero__form margin50" action="/home-user" method="POST">
+                <input class="hero__input" name="email" type="text" placeholder="Insert your mail">
+                <input class="hero__input" name="password" type="text" placeholder="Insert your password">
+                <input class="btn hero__btninput" type="submit" value="Sign Up">
+                <p class="hero__message-danger"> <%= message %>  </p>
+            </form>
+            <div class="hero__containerlinks">
+                <span class="hero__link left">Reset password</span>
+                <span class="hero__link right">¿Forgot your password?</span>
+            </div>
+        </div>
     </div>
 
-
+    <script src="js/main.js"></script>
 </body>
 </html>
