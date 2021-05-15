@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     font-family: var(--font-primary);
+    font-size: 18px;
+    outline: none;
 }
 
 :root {
-    --font-primary: font-family: 'Yanone Kaffeesatz', sans-serif;
+    --font-primary: 'Yanone Kaffeesatz', sans-serif;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
 }
 
 .btns {
+    height: 42px;
     border: none;
     padding: 5px 20px;
     background-color: gray;
@@ -47,6 +50,9 @@ body {
     justify-content: space-between;
     height: 50px;
     background-color: rgb(90, 90, 90);
+    position: sticky;
+    width: 100%;
+    color: white;
 }
 
 .navbar .navbar__icon {
@@ -124,15 +130,17 @@ body {
 */
 
 .hero {
-    height: 75vh;
+    height: 100vh;
     position: relative;
-    background-image: url(../image/human.png);
+    background-image: url(/static/image/human.png);
     background-repeat: no-repeat;
     background-size: 60vh;
     background-position: left bottom;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
+    padding-top: 50px;
 }
 
 .hero::before {
@@ -146,7 +154,7 @@ body {
     right: -200px;
     transform: rotate(54deg);
     border-radius: 50%;
-    z-index: 10;
+    z-index: -20;
     overflow: hidden;
 }
 
@@ -161,11 +169,11 @@ body {
     right: -200px;
     transform: rotate(54deg);
     border-radius: 50%;
-    z-index: 20;
+    z-index: -10;
 }
 
 .hero__box {
-    height: 400px;
+    /* height: 400px; */
     width: 390px;
     background-color: #E3E3E3;
     justify-content: right;
@@ -174,6 +182,7 @@ body {
     right: 140px;
     border-radius: 25px;
     box-shadow: 2px 2px 4px #959494;
+    padding: 1em;
 }
 
 .hero__title {
@@ -193,6 +202,10 @@ body {
     margin: 15px 0;
     padding: 10px;
     color: #111;
+}
+.hero__input--bw100 {
+    display: block;
+    width: 100%;
 }
 
 .hero__btninput {
@@ -241,7 +254,7 @@ body {
 }
 
 .container__imagesmall {
-    height: 250px;
+    height: 60px;
     margin: 10px 0;
 }
 
@@ -283,11 +296,11 @@ body {
 }
 
 .boxdisplacement__container {
-    width: 50%;
-    height: 40vh;
+    width: 400px;
     background-color: white;
     position: relative;
     border-radius: 5px;
+    padding: 2em 1.25em;
 }
 
 .boxdisplacement__btn {
