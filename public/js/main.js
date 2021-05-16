@@ -9,6 +9,16 @@ btnsignup.forEach(element => {
     });
 });
 
-btnDeleteWindow.addEventListener('click', () => {
-    containerdisplacement.classList.toggle('show');
-});
+// btnDeleteWindow.addEventListener('click', () => {
+//     containerdisplacement.classList.toggle('show');
+// });
+
+const btnMenuBurguer = document.querySelector('.navbar__dropdown'),
+      showMenu = document.querySelector('.navbar__menu'),
+      arrow = document.querySelector('.fa-chevron-right'); 
+console.log(btnMenuBurguer)
+
+btnMenuBurguer.addEventListener('click', () => {
+    showMenu.classList.toggle('top');
+    arrow.classList.toggle('rotate');
+})

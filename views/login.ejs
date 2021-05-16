@@ -1,0 +1,20 @@
+<%- include('./templates/header', {title : 'plagio instagram'})  %> 
+    <%- include('./templates/navbar')  %> 
+    <div class="hero">
+        <div class="hero__box">
+            <p class="hero__title">Enter on your account</p>
+            <form class="hero__form" action="/auth/login" method="POST">
+                <input class="hero__input hero__input--bw100" name="email" type="email" required placeholder="Insert your mail" value="<%= email ? email : '' %>">
+                <input class="hero__input hero__input--bw100" name="password" type="password" required placeholder="Insert your password">
+                <input class="btns hero__btninput" type="submit" value="Login">
+                <p class="hero__message-danger"> <%= errorMsg %>  </p>
+            </form>
+            <div class="hero__containerlinks">
+                <span class="hero__link left">Reset password</span>
+                <span class="hero__link right">¿Forgot your password?</span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
