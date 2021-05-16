@@ -133,6 +133,7 @@ body {
     display: flex;
     justify-content: right;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -147,7 +148,6 @@ body {
     transform: rotate(54deg);
     border-radius: 50%;
     z-index: 10;
-    overflow: hidden;
 }
 
 .hero::after {
