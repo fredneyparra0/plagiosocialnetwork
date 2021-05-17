@@ -1,0 +1,43 @@
+<%- include('./templates/header', {title : 'welcome'})  %>
+<div class="bodycolor">
+    <div class="navbar">
+        <div class="navbar__icon">
+                <i class="fab fa-instagram size"></i>
+                <i class="far fa-envelope sizesmall color message"></i>
+                <i class="fas fa-chalkboard-teacher sizesmall color"></i>
+            </div>
+            <div class="navbar__items">
+                <ul class="navbar__ul">
+                    <li class="navbar__item">
+                        <div class="navbar__dropdown">
+                            <span class="navbar__title"><%= user.name %></span>
+                            <i class="fas fa-chevron-right space "></i>
+                        </div>
+                        <ul class="navbar__menu">
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">My profile</a>
+                            </li>
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">Notifications</a>
+                            </li>
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">Message</a>
+                            </li>
+                            <li class="navbar__itemmenu"><a class="navbar__ancor noneshadow" href="/auth/logout">Log out <i class="fas fa-sign-out-alt navbar__icon--position"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="boxtwo">
+            <%- include('./templates/chat')  %>
+            <div class="boxtwo__right"> 
+                <%- include('./templates/mycontacts', {contact: contacts})  %>                
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>  

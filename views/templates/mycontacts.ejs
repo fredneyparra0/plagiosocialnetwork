@@ -1,0 +1,9 @@
+<div class="boxtwo__container">
+    <% contacts.forEach(element => { %>
+        <div class="boxtwo__boxprofile">
+            <i class="far fa-user-circle colorblue sizeprofile"></i>
+            <p class="boxtwo__title"> <%= element.name %>  </p>
+            <a class="btns hero__btninput hero__btnmargin" href="#">Delete Contact</a>
+        </div>
+    <% }) %>
+</div>
