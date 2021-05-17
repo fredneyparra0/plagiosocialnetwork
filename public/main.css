@@ -14,6 +14,11 @@ body {
     position: relative;
 }
 
+.bodycolor {
+    background-color: #bebebe33;
+    height: 100vh;
+}
+
 .btn {
     border: none;
     padding: 5px 20px;
@@ -435,3 +440,118 @@ body {
     text-align: center;
     margin: 20px 0;
 }
+
+/*
+======================== BOX TWO
+*/
+
+.boxtwo {
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-around;
+}
+
+.boxtwo__person {
+    margin: 0;
+    width: 234px;
+    padding: 5px 0;
+}
+
+.boxtwo__left {
+    background-color: white;
+    border-radius: 10px;
+    width: 315px;
+}
+
+.boxtwo__right {
+    background-color: white;
+    border-radius: 10px;
+    width: 655px;
+}
+.boxtwo__right.boxtwo__right--move {
+    text-align: end;
+}
+
+.fontsmall {
+    font-size: 10px;
+}
+
+.colorgreen {
+    color: limegreen;
+}
+
+.colorgray {
+    color: gray;
+}
+
+.colorblue {
+    color: #2B62CC;
+}
+
+.boxtwo__item {
+    list-style: none;
+    padding: 15px 15px 15px 15px;
+}
+
+.boxtwo__person {
+    margin: 0 30px;
+}
+
+.boxtwo__ancor {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    color: black;
+}
+
+.boxtwo__input {
+    color: gray;
+}
+
+.boxtwo__absolute {
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    color: white;
+}
+
+.boxtwo__containerbtn {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+}
+
+.boxtwo__btninput {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #FFA434;
+    border-radius: 10px;
+    border: none;
+}
+
+/*
+======================== BOX TWO Profile person
+*/
+
+.boxtwo__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.boxtwo__boxprofile {
+    width: 128px;
+    text-align: center;
+    padding: 10px 0;
+    min-width: 130px;
+}
+
+.sizeprofile {
+    font-size: 60px;
+}
+
+.boxtwo__title {
+    padding: 5px 0;
+}
+

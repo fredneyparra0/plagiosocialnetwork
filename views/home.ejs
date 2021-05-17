@@ -1,100 +1,42 @@
 <%- include('./templates/header', {title : 'welcome'})  %>
-
+<div class="bodycolor">
     <div class="navbar">
         <div class="navbar__icon">
-            <i class="fab fa-instagram size"></i>
-            <i class="far fa-envelope sizesmall color message"></i>
-            <i class="fas fa-chalkboard-teacher sizesmall color"></i>
-        </div>
-        <div class="navbar__items">
-            <ul class="navbar__ul">
-                <li class="navbar__item">
-                    <div class="navbar__dropdown">
-                        <span class="navbar__title"><%= user.name %></span>
-                        <i class="fas fa-chevron-right space "></i>
-                    </div>
-                    <ul class="navbar__menu">
-                        <li class="navbar__itemmenu">
-                            <a class="navbar__ancor noneshadow" href="#">My profile</a>
-                        </li>
-                        <li class="navbar__itemmenu">
-                            <a class="navbar__ancor noneshadow" href="#">Notifications</a>
-                        </li>
-                        <li class="navbar__itemmenu">
-                            <a class="navbar__ancor noneshadow" href="#">Message</a>
-                        </li>
-                        <li class="navbar__itemmenu"><a class="navbar__ancor noneshadow" href="/auth/logout">Log out <i class="fas fa-sign-out-alt navbar__icon--position"></i></a></li>
-                    </ul>
-                </li>
-                <!-- <li class="navbar__item">
-                    <a class="navbar__link" href="#">Messages</a>
-                </li>
-                <li class="navbar__item">
-                    
-                </li> -->
-            </ul>
-        </div>
-    </div>
-    <div class="twobox">
-        <div class="twobox__one">
-            <ul class="twobox__list">
-                <li class="twobox__item">
-                    <i class="far fa-envelope"></i>
-                    Messages
-                </li>
-                <li class="twobox__item">
-                    <i class="far fa-address-book"></i>
-                    Friends
-                </li>
-                <li class="twobox__item">
-                    <i class="fas fa-atlas"></i>
-                    More friends
-                </li>
-                <li class="twobox__item">
-                    <i class="far fa-folder"></i>
-                    Galery
-                </li>
-                <li class="twobox__item">
-                    ....
-                </li>
-            </ul>
-        </div>
-        <div class="twobox__two">
-            <div class="twobox__boxcontent">
-                <div class="twobox__informationperson">
-                    <p class="twobox__title twobox--pointer">@dhaniel__diaz</p>
-                    <p class="twobox__moreoptions twobox--pointer">...</p>
-                </div>
-                <div class="twobox__content">
-                    <img src="/static/image/publication--one.png">
-                </div>
-                <div class="twobox__items">
-                    <i class="far fa-comment"></i>
-                    <i class="far fa-thumbs-up"></i>
-                </div>
-                <p class="twobox__message">
-                    this is my new project in nodejs with ejs
-                </p>
+                <i class="fab fa-instagram size"></i>
+                <i class="far fa-envelope sizesmall color message"></i>
+                <i class="fas fa-chalkboard-teacher sizesmall color"></i>
             </div>
-            <div class="twobox__boxcontent">
-                <div class="twobox__informationperson">
-                    <p class="twobox__title twobox--pointer">@fredneyparra</p>
-                    <p class="twobox__moreoptions twobox--pointer">...</p>
-                </div>
-                <div class="twobox__content">
-                    <img src="/static/image/publication--two.png">
-                </div>
-                <div class="twobox__items">
-                    <i class="far fa-comment"></i>
-                    <i class="far fa-thumbs-up"></i>
-                </div>
-                <p class="twobox__message">
-                    this is my second publication in this page
-                </p>
+            <div class="navbar__items">
+                <ul class="navbar__ul">
+                    <li class="navbar__item">
+                        <div class="navbar__dropdown">
+                            <span class="navbar__title"><%= user.name %></span>
+                            <i class="fas fa-chevron-right space "></i>
+                        </div>
+                        <ul class="navbar__menu">
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">My profile</a>
+                            </li>
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">Notifications</a>
+                            </li>
+                            <li class="navbar__itemmenu">
+                                <a class="navbar__ancor noneshadow" href="#">Message</a>
+                            </li>
+                            <li class="navbar__itemmenu"><a class="navbar__ancor noneshadow" href="/auth/logout">Log out <i class="fas fa-sign-out-alt navbar__icon--position"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
     
+        <div class="boxtwo">
+            <%- include('./templates/chat')  %>
+            <div class="boxtwo__right">
+                 
+            </div>
+        </div>
+    </div>
 
     <script src="/static/js/main.js"></script>
 </body>
