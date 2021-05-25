@@ -68,6 +68,7 @@ rootRouter.get('/home-user/my-contacts', async (req, res) => {
 
     const contacts = await modelUser.findOne({ email: userLogged.email}).populate('contacts games').exec( (err, contacts) => {
         console.log(contacts);
+        
     })
 
     res.render('mycontacts', {user: userLogged, contacts: contacts});
